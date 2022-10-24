@@ -43,7 +43,7 @@ const calculateBill = () => {
   // calculate the per person total (total divided by number of people)
    perPersonPrice = total / numberOfPeople;
    // update the perPersonTotal on DOM & show it to user
-  perPersonTotalDiv.textContent = Math.floorperPersonPrice;
+   perPersonTotalDiv.textContent = Math.round(perPersonPrice * 100) / 100 
 };
 // ** Splits the bill between more people **
 const increasePeople = () => {
