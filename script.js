@@ -20,30 +20,27 @@ These are all the DIV ID's you're gonna need access to 👇
 // Get global access to all inputs / divs here (you'll need them later 😘)
 // bill input, tip input, number of people div, and per person total div
 
-let billTotalInputDiv = document.getElementById("billTotalInput");
-let tipInputDiv = document.getElementById("tipInput");
-let numberOfPeopleDiv = document.getElementById("numberOfPeople");
-let perPersonTotalDiv = document.getElementById("perPersonTotal");
-let bill = 0
-let tip = 0
-let totalTipAmount = 0
-let perPersonPrice = 0
+const billTotalInputDiv = document.getElementById("billTotalInput");
+const tipInputDiv = document.getElementById("tipInput");
+const numberOfPeopleDiv = document.getElementById("numberOfPeople");
+const perPersonTotalDiv = document.getElementById("perPersonTotal");
+ 
  // Get number of people from number of people div
 let numberOfPeople = numberOfPeopleDiv.textContent;
 // ** Calculate the total bill per person **
 const calculateBill = () => {
   // get bill from user input & convert it into a number
-   bill = Number(billTotalInputDiv.value);
+ const bill = Number(billTotalInputDiv.value);
    // get the tip from user & convert it into a percentage (divide by 100)
-    tip = Number(tipInputDiv.value) / 100;
+   const tip = Number(tipInputDiv.value) / 100;
    // get the total tip amount
-   totalTipAmount = bill * tip;
+   const totalTipAmount = bill * tip;
    // calculate the total (tip amount + bill)
-   total = totalTipAmount + bill;
+   const total = totalTipAmount + bill;
   // calculate the per person total (total divided by number of people)
-   perPersonPrice = total / numberOfPeople;
+  const perPersonPrice = total / numberOfPeople;
    // update the perPersonTotal on DOM & show it to user
-   perPersonTotalDiv.textContent = Math.round(perPersonPrice * 100) / 100 
+    perPersonTotalDiv.textContent = `$${perPersonPrice.toFixed(2)}` 
 };
 // ** Splits the bill between more people **
 const increasePeople = () => {

@@ -56,3 +56,25 @@
     border-radius: 50%;
   }
   
+
+  #bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+
+.controls{
+display: flex;
+ width: 100px;
+ justify-content: space-around;
+ }
+  
+  .splitButton{
+    color:black;
+     border-radius: 20px;
+     border: none;
+    background-color: #8990ec;
+
+   }
+ 
